@@ -22,7 +22,7 @@ onAuthStateChanged(auth, (user) => {
     }
 })
 
-
+//// sign out function
 let signOutBttn = () => { 
 
     signOut(auth).then(() => {
