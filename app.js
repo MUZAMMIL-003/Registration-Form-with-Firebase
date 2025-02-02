@@ -42,7 +42,7 @@ let signOutBttn = () => {
 let signOutButton = document.getElementById("signOutBttn");
 signOutButton.addEventListener("click", signOutBttn);
 
-
+// queary karni hai yaha pe 
 
 
 
