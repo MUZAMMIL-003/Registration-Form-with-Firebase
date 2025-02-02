@@ -39,3 +39,14 @@ let signOutBttn = () => {
 
 let signOutButton = document.getElementById("signOutBttn");
 signOutButton.addEventListener("click", signOutBttn);
+
+
+
+
+
+
+
+
+
+
+
