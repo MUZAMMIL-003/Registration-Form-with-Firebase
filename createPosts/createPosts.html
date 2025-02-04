@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Posts!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 98vh;
+            background-color: #f1f1f1;
+        }
+
+        .secondDiv {
+            width: 60%;
+            height: 60%;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 3px solid black ;
+            background-color: blue;
+            overflow-x: hidden;
+        }
+        #txtArea{
+            width: 100%;
+            height: 89%;
+            border: none;
+            outline: none;
+            background-color: rgba(0, 255, 76, 0.973);
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px;
+            border-radius: 15px;
+        }
+        #txtAreaDiv{
+            width: 100%;
+            height: 83.5%;
+            padding: 10px;
+            background-color: rgba(0, 174, 255, 0.973);
+        }
+        h1{
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            padding: 10px;
+        }
+        button{
+            margin: 10px 20px;
+            /* padding: 10px; */
+            border-radius: 10px;
+            font-size: 1.5rem;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="secondDiv"> 
+            <h1>Create Your Post!</h1><hr>
+            <div id="txtAreaDiv">
+                <textarea name="" id="txtArea">Enter Some Text Here!</textarea>
+                <button type="button" class="btn btn-primary crtBttn"  onclick="crtFun()">Primary</button>
+                <button type="button" class="btn btn-secondary dltBttn">Secondary</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="createPosts.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
