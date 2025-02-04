@@ -5,13 +5,13 @@
   import { getFirestore } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js'
 
   const firebaseConfig = {
-    apiKey: "AIzaSyDUGNB_d1tXz8dCqMy0ooJ4nNee2mAFTzU",
-    authDomain: "first-project-9a7fc.firebaseapp.com",
-    projectId: "first-project-9a7fc",
-    storageBucket: "first-project-9a7fc.firebasestorage.app",
-    messagingSenderId: "5077976363",
-    appId: "1:5077976363:web:84cfc0ebd5eb42b754316e",
-    measurementId: "G-SKVX8DPQCZ"
+    apiKey: "AIzaSyBfs94YMgiXcWUnk3tZdofVLUnrUjQsm_o",
+    authDomain: "registration-form-7542c.firebaseapp.com",
+    projectId: "registration-form-7542c",
+    storageBucket: "registration-form-7542c.firebasestorage.app",
+    messagingSenderId: "530077366848",
+    appId: "1:530077366848:web:824c3046b936035f1cbda5",
+    measurementId: "G-Y5534XS8FH"
   };
 
   // Initialize Firebase
