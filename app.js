@@ -13,6 +13,7 @@ onAuthStateChanged(auth, (user) => {
     if (user) {
         const uid = user.uid;
         console.log(user)
+        console.log(uid)
         console.log("User is signed in")
         // ...
     } else {
