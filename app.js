@@ -32,7 +32,7 @@ querySnapshot.forEach((doc) => {
 //   console.log(`${doc.id} => ${doc.data()}`);
 let user = doc.data(); /// mujhe user ki id chahiye thi taki me usey posts ke sath print karwa saku
 console.log(user)
-let posts = doc.data(); // yaha mujhe user ki posts chahiye thi
+let posts = doc.data().post; // yaha mujhe user ki posts chahiye thi
 console.log(posts)
 let postsPrnDiv = document.getElementById("postsPrnDiv");
 let postsChldDiv = document.getElementById("postsChldDiv");

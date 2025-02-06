@@ -27,7 +27,7 @@ onAuthStateChanged(auth, (user) => {
             console.log(txtArea.value);
             try {
                 const docRef = await addDoc(collection(db, "Posts"), {
-                    uid : user.uid,
+                    Userid : user.uid,
                     post: txtArea.value,
                 });
                 console.log("Document written with ID: ", docRef.id);
