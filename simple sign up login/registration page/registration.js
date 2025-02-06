@@ -19,6 +19,7 @@ import { db } from '../../firebaseConfig.js';
 onAuthStateChanged(auth, (user) => {
     if (user) {
         const uid = user.uid;
+        localStorage.setItem("user", JSON.stringify(uid))
         console.log("User is signed in")
         window.location.replace("../../index.html")
         // ...
@@ -29,13 +30,6 @@ onAuthStateChanged(auth, (user) => {
     }
 })
 
-
-///getting user data from database
-
-//   const querySnapshot = await getDocs(collection(db, "users"));
-//   querySnapshot.forEach((doc) => {
-//     console.log(`${doc.id.value} => ${doc.data().value}`);
-//   });
 
 
 let signUp = async (event) => {
@@ -50,6 +44,7 @@ let signUp = async (event) => {
             const user = userCredential.user;
             console.log("Sign up successfull")
             console.log("User: ", user)
+           
 
             // ...
         })
@@ -77,7 +72,7 @@ let signUp = async (event) => {
     await setDoc(doc(db, `users`, uid), {
         displayName: userName.value,
         email: email.value,
-
+        userID : uid,
     });
 
 

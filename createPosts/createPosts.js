@@ -20,22 +20,24 @@ let dltBttn = document.getElementById('dltBttn');
 onAuthStateChanged(auth, (user) => {
     if (user) {
         const uid = user.uid;
+        localStorage.setItem("user", JSON.stringify(uid))
         console.log(user)
         console.log(uid)
         console.log("User is signed in")
-        crtBttn.addEventListener('click', async() => {
+        crtBttn.addEventListener('click', async () => {
             console.log(txtArea.value);
             try {
                 const docRef = await addDoc(collection(db, "Posts"), {
-                    Userid : user.uid,
+                    Userid: user.uid,
                     post: txtArea.value,
                 });
                 console.log("Document written with ID: ", docRef.id);
                 console.log(uid)
+                window.location.replace("../index.html")
                 // console.log(post)
-              } catch (e) {
+            } catch (e) {
                 console.error("Error adding document: ", e);
-              }
+            }
         });
         // ...
     } else {

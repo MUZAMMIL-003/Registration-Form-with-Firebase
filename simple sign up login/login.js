@@ -4,9 +4,12 @@ import { signInWithEmailAndPassword,
 
 import { auth } from '../firebaseConfig.js'
 
+
+
 onAuthStateChanged(auth, (user) => {
     if (user) {
       const uid = user.uid;
+      localStorage.setItem("user", JSON.stringify(uid))
       console.log(uid)
         console.log("User is signed in")
         window.location.replace("../index.html")
