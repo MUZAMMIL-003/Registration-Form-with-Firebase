@@ -53,6 +53,8 @@ querySnapshot.forEach((doc) => {
     let posts = doc.data().post;
     // console.log("user-text =>", posts)
     let email = doc.data().email;
+    let username = doc.data(); /// yaha mujhe userName get krna he front me show karwaney k liyee...
+    console.log("user-Name =>", username)
 
     
     let rowDiv = document.querySelector(".row");

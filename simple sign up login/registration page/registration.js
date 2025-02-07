@@ -2,6 +2,7 @@
 import {
     createUserWithEmailAndPassword,
     onAuthStateChanged,
+    updateProfile,
 } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js'
 
 import { auth } from "../../firebaseConfig.js";
@@ -11,6 +12,7 @@ import {
     collection,
     addDoc,
     getDocs,
+   
 } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js'
 
 import { db } from '../../firebaseConfig.js';
@@ -44,6 +46,16 @@ let signUp = async (event) => {
             const user = userCredential.user;
             console.log("Sign up successfull")
             console.log("User: ", user)
+            updateProfile(auth.currentUser, {
+                displayName: userName.value,
+              }).then(() => {
+                // Profile updated!
+                console.log("Profile updated")
+                // ...
+              }).catch((error) => {
+                // An error occurred
+                // ...
+              });
            
 
             // ...
@@ -61,6 +73,7 @@ let signUp = async (event) => {
             displayName: userName.value,
             email: email.value,
             password: password.value,
+            
 
         });
         console.log("Document written with ID: ", docRef.id);
