@@ -52,8 +52,8 @@ let Userid = doc.data().Userid;
 <div class="card-body">
 <h5 class="card-title">${posts}</h5>
 <p class="card-text">${"Written By =>", Userid}</p>
- <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+<a href="#" class="card-link">Update Post</a>
+<a href="#" class="card-link">Delete Post</a>
 </div>
 </div>
 </div>
