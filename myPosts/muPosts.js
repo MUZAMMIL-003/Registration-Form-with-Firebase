@@ -34,10 +34,10 @@ onAuthStateChanged(auth, (user) => {
 
 
 
-
+/// gettinh user posts from firestore with Query...
 const UserPfp = collection(db, "Posts");
 let user = JSON.parse(localStorage.getItem("user"));
-// Create a query against the collection.
+
 const q = query(UserPfp, where("Userid", "==", user));
 
 const querySnapshot = await getDocs(q);
@@ -52,6 +52,8 @@ let Userid = doc.data().Userid;
 <div class="card-body">
 <h5 class="card-title">${posts}</h5>
 <p class="card-text">${"Written By =>", Userid}</p>
+ <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
 </div>
 </div>
 </div>
