@@ -34,7 +34,7 @@ onAuthStateChanged(auth, (user) => {
 
 
 
-
+///chat gpt code...
 
 /// gettinh user posts from firestore with Query...
 const UserPfp = collection(db, "Posts");
