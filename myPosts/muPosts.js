@@ -7,6 +7,8 @@ import {
   getDocs,
   query,
   where,
+  doc,
+  updateDoc,
 } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js'
 
 
@@ -42,8 +44,8 @@ const q = query(UserPfp, where("Userid", "==", user));
 
 const querySnapshot = await getDocs(q);
 querySnapshot.forEach((doc) => {
-let posts = doc.data().post;
-let Userid = doc.data().Userid;
+  let posts = doc.data().post;
+  let Userid = doc.data().Userid;
 
   let rowDiv = document.querySelector(".row");
   let tempDiv = `
@@ -60,3 +62,20 @@ let Userid = doc.data().Userid;
 `
   rowDiv.innerHTML += tempDiv;
 });
+
+
+const userDocRef = doc(db, 'users', 'user');
+// Define the fields you want to update
+const updateUser = async () => {
+  try {
+    await updateDoc(userDocRef, {
+      name: 'New Name',  // Field to update
+      age: 25            // Another field to update
+    });
+    console.log('Document updated successfully!');
+  } catch (e) {
+    console.error('Error updating document: ', e);
+  }
+};
+
+updateUser();  // Call the function to update the document
