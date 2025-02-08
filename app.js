@@ -56,7 +56,7 @@ querySnapshot.forEach((doc) => {
     let posts = doc.data().post;
     // console.log("user-text =>", posts)
     let email = doc.data().email;
-    let username = doc.data(); /// yaha mujhe userName get krna he front me show karwaney k liyee...
+    let username = doc.data().userName /// yaha mujhe userName get krna he front me show karwaney k liyee...
     console.log("user-Name =>", username)
 
     
@@ -66,7 +66,7 @@ querySnapshot.forEach((doc) => {
     <div class="card h-100">
     <div class="card-body">
     <h5 class="card-title">${posts}</h5>
-    <p class="card-text">${"Written By =>", user}</p>
+    <p class="card-text">Written By => ${ username}</p>
     </div>
     </div>
     </div>

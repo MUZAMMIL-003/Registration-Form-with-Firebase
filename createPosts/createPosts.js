@@ -24,12 +24,14 @@ onAuthStateChanged(auth, (user) => {
         console.log(user)
         console.log(uid)
         console.log("User is signed in")
+        let userName = localStorage.getItem("userName");
         crtBttn.addEventListener('click', async () => {
             console.log(txtArea.value);
             try {
                 const docRef = await addDoc(collection(db, "Posts"), {
                     Userid: user.uid,
                     post: txtArea.value,
+                    userName: userName,
                 });
                 console.log("Document written with ID: ", docRef.id);
                 console.log(uid)
