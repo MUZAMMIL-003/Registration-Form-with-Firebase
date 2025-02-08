@@ -12,6 +12,7 @@ import {
     collection,
     addDoc,
     getDocs,
+    updateDoc,
    
 } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js'
 
@@ -48,7 +49,8 @@ let signUp = async (event) => {
             console.log("User: ", user)
             updateProfile(auth.currentUser, {
                 displayName: userName.value,
-              }).then(() => {
+            }).then(() => {
+                localStorage.setItem("userName", JSON.stringify(displayName))
                 // Profile updated!
                 console.log("Profile updated")
                 // ...
@@ -88,7 +90,10 @@ let signUp = async (event) => {
         userID : uid,
     });
 
-
+    await updateDoc(docRef, {
+        "displayName":userName.value,
+       
+    });
 }
 
 let signUpBttn = document.getElementById("signUpBttn")

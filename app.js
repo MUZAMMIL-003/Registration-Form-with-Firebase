@@ -21,13 +21,16 @@ if (!User) {
 }
 console.log(User);
 
-
+let userName = localStorage.getItem("userName");
 
 ////checking user state
 onAuthStateChanged(auth, (user) => {
     if (user) {
         const uid = user.uid;
         localStorage.setItem("user", JSON.stringify(uid))
+        let username = user.displayName;
+        console.log(username)
+        localStorage.setItem("userName", JSON.stringify(username))
         console.log(user)
         let userEmail =user.email;
          let shwEmail = document.getElementById("shwEmail");

@@ -78,7 +78,7 @@ const updateUser = async () => {
   }
 };
 
-updateUser();  // Call the function to update the document
+// updateUser();  // Call the function to update the document
 
 
 
