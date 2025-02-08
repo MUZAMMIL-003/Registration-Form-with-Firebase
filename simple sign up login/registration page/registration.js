@@ -24,7 +24,7 @@ onAuthStateChanged(auth, (user) => {
         const uid = user.uid;
         localStorage.setItem("user", JSON.stringify(uid))
         console.log("User is signed in")
-        window.location.replace("../../index.html")
+        window.location.assign("../../index.html")
         // ...
     } else {
         // User is signed out

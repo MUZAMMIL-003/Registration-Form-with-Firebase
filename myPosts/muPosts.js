@@ -9,11 +9,11 @@ import {
   where,
   doc,
   updateDoc,
+  deleteDoc,
 } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js'
 
 
 import { auth, db } from '../firebaseConfig.js';
-
 
 
 ////checking user state
@@ -32,9 +32,21 @@ onAuthStateChanged(auth, (user) => {
   }
 })
 
+let updateFunc = async (docID) => {
+  console.log(docID);
 
-
-///chat gpt code...
+  // try {
+  //   // Add a new document in collection "cities"
+  //   await updateDoc(doc(db, "posts", post_id), {
+  //     postText: "updated post 2nd time",
+  //   }).then(()=>{
+  //     console.log("update done");
+  //     getMyPosts();
+  //   })
+  // } catch (error) {
+  //   console.error(error)
+  // }
+};
 
 /// gettinh user posts from firestore with Query...
 const UserPfp = collection(db, "Posts");
@@ -43,10 +55,12 @@ let user = JSON.parse(localStorage.getItem("user"));
 const q = query(UserPfp, where("Userid", "==", user));
 
 const querySnapshot = await getDocs(q);
-querySnapshot.forEach((doc) => {
-  let posts = doc.data().post;
-  let Userid = doc.data().Userid;
-  let username = doc.data().userName 
+querySnapshot.forEach((doc1) => {
+  let posts = doc1.data().post;
+  let Userid = doc1.data().Userid;
+  let username = doc1.data().userName 
+  let docID = doc1.id;
+  console.log(docID)
 
   let rowDiv = document.querySelector(".row");
   let tempDiv = `
@@ -55,31 +69,30 @@ querySnapshot.forEach((doc) => {
 <div class="card-body">
 <h5 class="card-title">${posts}</h5>
 <p class="card-text">Written By =>${ username}</p>
-<a href="#" class="card-link">Update Post</a>
-<a href="#" class="card-link">Delete Post</a>
+<a href="#" class="card-link" id="Update">Update Post</a>
+<a href="#" class="card-link" id="delete">Delete Post</a>
 </div>
 </div>
 </div>
 `
-  rowDiv.innerHTML += tempDiv;
+rowDiv.innerHTML += tempDiv;
+
+let deleteBttn = document.getElementById("delete");
+deleteBttn.addEventListener("click", async () => {
+  await deleteDoc(doc(db, "Posts", docID));
+  window.location.reload();
+})
+
+let updateBttn = document.getElementById("Update");
+updateBttn.addEventListener("click", async () => {
+  updateFunc(docID)
+  
+})
+
 });
 
 
-const userDocRef = doc(db, 'users', 'user');
-// Define the fields you want to update
-const updateUser = async () => {
-  try {
-    await updateDoc(userDocRef, {
-      name: 'New Name',  // Field to update
-      age: 25            // Another field to update
-    });
-    console.log('Document updated successfully!');
-  } catch (e) {
-    console.error('Error updating document: ', e);
-  }
-};
 
-// updateUser();  // Call the function to update the document
 
 
 

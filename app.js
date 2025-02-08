@@ -32,6 +32,8 @@ onAuthStateChanged(auth, (user) => {
         console.log(username)
         localStorage.setItem("userName", JSON.stringify(username))
         console.log(user)
+        let shwName = document.getElementById("shwName");
+        shwName.innerHTML = username;
         let userEmail =user.email;
          let shwEmail = document.getElementById("shwEmail");
          shwEmail.innerHTML = userEmail;
