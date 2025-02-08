@@ -46,6 +46,7 @@ const querySnapshot = await getDocs(q);
 querySnapshot.forEach((doc) => {
   let posts = doc.data().post;
   let Userid = doc.data().Userid;
+  let username = doc.data().userName 
 
   let rowDiv = document.querySelector(".row");
   let tempDiv = `
@@ -53,7 +54,7 @@ querySnapshot.forEach((doc) => {
 <div class="card h-100">
 <div class="card-body">
 <h5 class="card-title">${posts}</h5>
-<p class="card-text">${"Written By =>", Userid}</p>
+<p class="card-text">Written By =>${ username}</p>
 <a href="#" class="card-link">Update Post</a>
 <a href="#" class="card-link">Delete Post</a>
 </div>
