@@ -64,8 +64,8 @@ querySnapshot.forEach((doc) => {
     
     let rowDiv = document.querySelector(".row");
     let tempDiv = `
-    <div class="col">
-    <div class="card h-100">
+    <div class="col  ">
+    <div class="card text-bg-info h-100">
     <div class="card-body">
     <h5 class="card-title">${posts}</h5>
     <p class="card-text">Written By => ${ username}</p>
@@ -73,6 +73,7 @@ querySnapshot.forEach((doc) => {
     </div>
     </div>
     `
+
     rowDiv.innerHTML += tempDiv;
 });
 

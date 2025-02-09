@@ -11,13 +11,22 @@
   <link rel="stylesheet" href="./simple sign up login/registration page/css.css">
   <style>
     .navbar {
-      background-color: transparent !important;
+     /* From https://css.glass */
+background: rgba(255, 255, 255, 0.17) !important;
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+backdrop-filter: blur(11.8px) !important;
+-webkit-backdrop-filter: blur(11.8px) !important;
+border: 1px solid rgba(231, 229, 229, 0.13) !important;
 
     }
 
     .main-container {
       height: 100vh;
       width: 100vw;
+      background-image: url("./simple sign up login/registration page/img/indexbg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
       background-color: aquamarine;
       padding-top: 100px;
       padding-left: 20px;
@@ -25,13 +34,28 @@
       grid-template-columns: repeat(auto-fill, minmax(250px, 10px)); */
 
     }
+    #navbar-brand{
+      font-size: 2.5rem !important;
+      color: rgb(255, 255, 255) !important;
+    }
     #crtpostbttn{
       margin-right: 20px;
+    }
+    .col{
+      /* From https://css.glass */
+      background-color: transparent !important;
+background: rgba(86, 9, 120, 0.57) !important;
+border-radius: 16px !important;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+backdrop-filter: blur(20px) !important;
+-webkit-backdrop-filter: blur(20px) !important;
+border: 1px solid rgba(86, 9, 120, 1) !important;
     }
   </style>
 </head>
 
 <body>
+  <!-- <a href=""></a> -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">My First Web!</a>
@@ -87,7 +111,7 @@
 
 
   <div class="main-container">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row  row-cols-1 row-cols-md-3 g-4">
 
     </div>
   </div>
