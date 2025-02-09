@@ -11,7 +11,10 @@
             justify-content: center;
             align-items: center;
             height: 98vh;
-            background-color: #f1f1f1;
+            background-image:url("../simple sign up login/registration page/img/mypostbg.webp");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .secondDiv {
@@ -21,15 +24,20 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border: 3px solid black ;
-            background-color: blue;
+            background: rgb(77,111,250);
+            background: linear-gradient(131deg, rgba(77,111,250,1) 0%, rgba(80,21,134,1) 46%, rgba(175,11,80,1) 97%);
+border: 1px solid rgba(255, 255, 255, 0.3);
             overflow-x: hidden;
         }
         #txtArea{
             width: 100%;
-            height: 89%;
-            border: none;
+            height: 82%;
+           border-color: azure;
             outline: none;
-            background-color: rgba(0, 255, 76, 0.973);
+         /* From https://css.glass */
+         background: rgb(77,111,250);
+         background: linear-gradient(131deg, rgba(77,111,250,1) 0%, rgba(80,21,134,1) 46%, rgba(175,11,80,1) 97%);
+border-radius: 16px;
             color: white;
             font-size: 1.5rem;
             padding: 10px;
@@ -37,15 +45,17 @@
         }
         #txtAreaDiv{
             width: 100%;
-            height: 83.5%;
+            height: 78%;
             padding: 10px;
-            background-color: rgba(0, 174, 255, 0.973);
+            /* background-color: rgba(0, 174, 255, 0.973); */
         }
         h1{
             text-align: center;
-            color: white;
-            font-size: 2.5rem;
+            color: rgba(247, 247, 247, 0.815);
+            font-size: 45px;
             padding: 10px;
+            font-stretch: ultra-expanded;
+            /* margin-top: 30px; */
         }
         button{
             margin: 10px 20px;
@@ -61,15 +71,15 @@
         <div class="secondDiv"> 
             <h1>Create Your Post!</h1><hr>
             <div id="txtAreaDiv">
-                <textarea name="" id="txtArea">Enter Some Text Here!</textarea>
+                <textarea name="" id="txtArea" placeholder="Enter Some Text Here!"></textarea>
                 <span></span>
-                <a href="#"><button type="button" class="btn btn-primary " id="crtBttn" >Create Post! </button></a>
-                <a href="../index.html"><button type="button" class="btn btn-secondary " id="dltBttn">Cancel</button></a>
+                <a href="#"><button type="button" class="btn btn-primary" id="crtBttn" >Create Post! </button></a>
+                <a href="../index.html"><button type="button" class="btn btn-danger " id="dltBttn">Cancel</button></a>
             </div>
 
         </div>
     </div>
-
+<a href=""></a>
    
      <script type="module" src="createPosts.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

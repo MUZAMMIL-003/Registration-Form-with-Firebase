@@ -99,8 +99,9 @@ querySnapshot.forEach((doc1) => {
       <div class="card-body">
         <h5 class="card-title">${posts}</h5>
         <p class="card-text">Written By =>${username}</p>
-        <a href="#" class="card-link" id="Update-${docID}">Update Post</a>
-        <a href="#" class="card-link" id="Delete-${docID}">Delete Post</a>
+        <a href="#" class="card-link" id="Update-${docID}"><button type="button" class="btn btn-secondary">Edit Post</button></a>
+        <a href="#" class="card-link" id="Delete-${docID}"><button type="button" class="btn btn-danger">Delete Post</button></a>
+        
       </div>
     </div>
   </div>
