@@ -35,17 +35,6 @@ onAuthStateChanged(auth, (user) => {
 let updateFunc = async (docID) => {
   console.log(docID);
 
-  // try {
-  //   // Add a new document in collection "cities"
-  //   await updateDoc(doc(db, "posts", post_id), {
-  //     postText: "updated post 2nd time",
-  //   }).then(()=>{
-  //     console.log("update done");
-  //     getMyPosts();
-  //   })
-  // } catch (error) {
-  //   console.error(error)
-  // }
 };
 
 /// gettinh user posts from firestore with Query...
@@ -61,7 +50,7 @@ querySnapshot.forEach((doc1) => {
   let username = doc1.data().userName 
   let docID = doc1.id;
   console.log(docID)
-
+// console.log(posts)
   let rowDiv = document.querySelector(".row");
   let tempDiv = `
 <div class="col">
@@ -86,7 +75,8 @@ deleteBttn.addEventListener("click", async () => {
 let updateBttn = document.getElementById("Update");
 updateBttn.addEventListener("click", async () => {
   updateFunc(docID)
-  
+  let input = prompt(" enter here",posts)
+  console.log(input)
 })
 
 });
