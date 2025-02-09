@@ -91,11 +91,3 @@ updateBttn.addEventListener("click", async () => {
 
 });
 
-
-// let modalBody = document.getElementById("modal-body")
-// console.log("modalBody.innerText")
-
-// let madalinpt = document.getElementById("madalInpt").value;
-// console.log("madalinpt")
- 
-
