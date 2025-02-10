@@ -11,22 +11,25 @@
   <link rel="stylesheet" href="./simple sign up login/registration page/css.css">
   <style>
     .navbar {
-     /* From https://css.glass */
 background: rgba(255, 255, 255, 0.17) !important;
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
-backdrop-filter: blur(11.8px) !important;
--webkit-backdrop-filter: blur(11.8px) !important;
+/* backdrop-filter: blur(11.8px) ;
+-webkit-backdrop-filter: blur(11.8px) !important; */
 border: 1px solid rgba(231, 229, 229, 0.13) !important;
 
+    }
+    .offcanvas-body{
+      backdrop-filter: blur(11.8px) !important ;
+-webkit-backdrop-filter: blur(11.8px) !important;
     }
 
     .main-container {
       height: 100vh;
       width: 100vw;
       background-image: url("./simple sign up login/registration page/img/mypostsbg.webp");
-      background-repeat: round;
-      background-size:contain;
+      background-repeat: no-repeat;
+      background-size:cover;
       padding-top: 100px;
       padding-left: 20px;
       /* display: grid;
@@ -37,6 +40,7 @@ border: 1px solid rgba(231, 229, 229, 0.13) !important;
       /* font-size: 2.5rem !important; */
       color: rgb(206, 205, 205) !important;
     }
+
     #crtpostbttn{
       margin-right: 20px;
     }
@@ -79,7 +83,7 @@ font-size: small;
                 class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
                 <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
                   <div id="shwName">User</div>
-                  <div class="font-medium truncate" id="shwEmail">name@flowbite.com</div>
+                  <div class="font-medium truncate" id="shwEmail">example@gmail.com</div>
                 </div>
                 <div class="py-1">
                   <a href="/myPosts/myPosts.html"
