@@ -66,7 +66,7 @@ querySnapshot.forEach((doc) => {
     let tempDiv = `
     <div class="col  ">
     <div class="card text-bg-secondary  h-100">
-    <div class="card-body">
+    <div class="card-body  ">
     <h5 class="card-title">${posts}</h5>
     <p class="card-text">Written By => ${ username}</p>
     </div>
