@@ -95,12 +95,16 @@ querySnapshot.forEach((doc1) => {
   // Modify the buttons' IDs to include the docID so they're unique
   let tempDiv = `
   <div class="col">
-    <div class="card bg-transparent  border-light h-100">
+    <div class="card p-3 bg-info bg-opacity-10 border border-info border rounded  border-light h-100">
       <div class="card-body">
         <h5 class="card-title text-light">${posts}</h5>
         <p class="card-text text-light">Written By =>${username}</p>
-        <a href="#" class="card-link" id="Update-${docID}"><button type="button" class="btn btn-secondary">Edit Post</button></a>
-        <a href="#" class="card-link" id="Delete-${docID}"><button type="button" class="btn btn-danger">Delete Post</button></a>
+        <a href="#" class="card-link" id="Update-${docID}">
+        <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-3 py-2.5 text-center me-2 mb-2">Edit Post</button>
+        </a>
+        <a href="#" class="card-link" id="Delete-${docID}">
+        <button type="button" class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-2.5 py-2.5 text-center me-2 mb-2">Delete Post</button>
+        </a>
         
       </div>
     </div>
