@@ -95,7 +95,7 @@ querySnapshot.forEach((doc1) => {
   // Modify the buttons' IDs to include the docID so they're unique
   let tempDiv = `
   <div class="col">
-    <div class="card h-100">
+    <div class="card  border-light  mb-3  style="max-width: 18rem; h-100">
       <div class="card-body">
         <h5 class="card-title">${posts}</h5>
         <p class="card-text">Written By =>${username}</p>
