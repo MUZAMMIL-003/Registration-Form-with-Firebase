@@ -65,10 +65,10 @@ querySnapshot.forEach((doc) => {
     let rowDiv = document.querySelector(".row");
     let tempDiv = `
     <div class="col  ">
-    <div class="card text-bg-secondary  h-100">
+    <div class="card p-3 bg-info bg-opacity-10 border border-info border rounded border-light h-100" h-100">
     <div class="card-body  ">
-    <h5 class="card-title">${posts}</h5>
-    <p class="card-text">Written By => ${ username}</p>
+    <h5 class="card-title  text-light">${posts}</h5>
+    <p class="card-text text-light">Written By => ${ username}</p>
     </div>
     </div>
     </div>
