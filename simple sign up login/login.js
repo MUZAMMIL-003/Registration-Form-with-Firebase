@@ -23,12 +23,12 @@ onAuthStateChanged(auth, (user) => {
   })
 
 
+  let email = document.getElementById("email")
+  let password = document.getElementById("password")
 
 let loginFunction = (event) => {
     event.preventDefault();
 
-    let email = document.getElementById("email")
-    let password = document.getElementById("password")
 
     signInWithEmailAndPassword(auth, email.value, password.value)
         .then((userCredential) => {
@@ -58,10 +58,12 @@ let loginWithGooglefunc = (event)=>{
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
+    console.log(user)
     // IdP data available using getAdditionalUserInfo(result)
     // ...
   }).catch((error) => {
     // Handle Errors here.
+    console.log(error)
     const errorCode = error.code;
     const errorMessage = error.message;
     // The email of the user's account used.
