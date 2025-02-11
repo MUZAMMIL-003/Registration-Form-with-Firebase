@@ -7,6 +7,10 @@ import { auth, provider, } from '../firebaseConfig.js'
 
 
 
+
+///////////////////////////// CHECKING IF USER EXIST OR NOT  //////////////////////////////////////////////
+
+
 onAuthStateChanged(auth, (user) => {
     if (user) {
       const uid = user.uid;
