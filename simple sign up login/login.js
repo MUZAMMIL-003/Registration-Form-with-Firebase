@@ -49,6 +49,12 @@ let loginFunction = (event) => {
 let loginBttn = document.getElementById("loginBttn")
 loginBttn.addEventListener("click", loginFunction)
 
+
+
+
+
+
+
 let loginWithGooglefunc = (event)=>{
   event.preventDefault();
   signInWithPopup(auth, provider)
