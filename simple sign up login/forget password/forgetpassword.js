@@ -6,7 +6,7 @@ import {
 
 import { auth } from "../../firebaseConfig.js";
 
-
+///////// CHECKING IF USER EXITST OR NOT //////////////////////////////////////////////////////
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -25,6 +25,8 @@ onAuthStateChanged(auth, (user) => {
     }
 })
 
+
+////////////////////////// FORGET PASSWORD FUNCTION ////////////////////////////////////////////////////////
 
 const forget_Password_Func = () => {
 
