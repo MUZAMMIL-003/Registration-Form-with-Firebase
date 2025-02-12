@@ -3,7 +3,7 @@ import { signInWithEmailAndPassword,
     signInWithPopup,
  } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js'
 
-import { auth, provider, } from '../firebaseConfig.js'
+import { auth, provider,GoogleAuthProvider, } from '../firebaseConfig.js'
 
 
 
@@ -88,5 +88,5 @@ let loginWithGooglefunc = (event)=>{
   });
 }
 
-let googleLoginBttn = document.getElementById("googleLoginBttn")
+let googleLoginBttn = document.getElementById("loginWithGoogleBttn")
 googleLoginBttn.addEventListener("click", loginWithGooglefunc);

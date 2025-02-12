@@ -28,4 +28,5 @@
     auth,
     db,
     provider,
+    GoogleAuthProvider,
   }
