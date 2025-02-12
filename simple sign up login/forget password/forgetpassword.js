@@ -26,7 +26,7 @@ onAuthStateChanged(auth, (user) => {
 })
 
 
-
+////////////////////////// FORGET PASSWORD FUNCTION ////////////////////////////////////////////////////////
 
 const forget_Password_Func = () => {
 
