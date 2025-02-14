@@ -44,9 +44,3 @@ const forget_Password_Func = () => {
 
 let frgtBtn = document.getElementById("frgtBtn");
 frgtBtn.addEventListener("click", forget_Password_Func); 
-
-
-
-
-
-//////////////////////////// hello world ///////////////////////
