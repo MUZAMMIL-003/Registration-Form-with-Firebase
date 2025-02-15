@@ -16,12 +16,16 @@
     measurementId: "G-Y5534XS8FH"
   };
 
+
+
   ////////////////////////////// Initialize Firebase variables //////////////////////////
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
   const auth = getAuth(app);
   const db = getFirestore(app);
   const provider = new GoogleAuthProvider();
+
+
 
  /////////////////////////// Export Firebase Function's keyWords ///////////////////////////////////
   export{
