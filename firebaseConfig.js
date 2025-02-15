@@ -23,7 +23,7 @@
   const db = getFirestore(app);
   const provider = new GoogleAuthProvider();
 
-
+ /////////////////////////// Export Firebase Function's keyWords ///////////////////////////////////
   export{
     auth,
     db,
